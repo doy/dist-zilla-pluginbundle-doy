@@ -1,6 +1,8 @@
 Revision history for Dist-Zilla-PluginBundle-DOY
 
 {{$NEXT}}
+
+0.02  2010-06-13
       - a few small fixes
       - add CheckChangesHasContent
 

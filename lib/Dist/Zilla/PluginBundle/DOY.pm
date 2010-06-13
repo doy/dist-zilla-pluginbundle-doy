@@ -22,6 +22,7 @@ My plugin bundle. Roughly equivalent to:
 
     [NextRelease]
     format = %-5v %{yyyy-MM-dd}d
+    [CheckChangesHasContent]
 
     [PkgVersion]
 
@@ -104,6 +105,7 @@ sub configure {
         'MetaConfig',
         'MetaJSON',
         ['NextRelease' => { format => '%-5v %{yyyy-MM-dd}d' }],
+        'CheckChangesHasContent',
         'PkgVersion',
         'PodCoverageTests',
         'PodSyntaxTests',

@@ -114,10 +114,9 @@ sub configure {
         ['Git::Check' => { allow_dirty => '' }],
         ['Git::Tag'   => { tag_format => '%v', tag_message => '' }],
         ['BumpVersionFromGit' => { version_regexp => '^(\d+\.\d+)$', first_version => '0.01'}],
-        'PodWeaver',
     );
 
-    $self->add_plugins('TaskWeaver') if $self->is_task;
+    $self->add_plugins($self->is_task ? 'TaskWeaver' : 'PodWeaver');
 }
 
 =head1 SEE ALSO

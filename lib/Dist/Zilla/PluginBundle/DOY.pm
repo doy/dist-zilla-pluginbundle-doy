@@ -41,7 +41,7 @@ My plugin bundle. Roughly equivalent to:
     tag_format = %v
     tag_message =
     [BumpVersionFromGit]
-    version_regexp = \d+\.\d+
+    version_regexp = ^(\d+\.\d+)$
     first_version = 0.01
 
     [PodWeaver]
@@ -113,7 +113,7 @@ sub configure {
         ['Repository' => { git_remote => $self->github_url, github_http => 0 }],
         ['Git::Check' => { allow_dirty => '' }],
         ['Git::Tag'   => { tag_format => '%v', tag_message => '' }],
-        ['BumpVersionFromGit' => { version_regexp => '\d+\.\d+', first_version => '0.01'}],
+        ['BumpVersionFromGit' => { version_regexp => '^(\d+\.\d+)$', first_version => '0.01'}],
         'PodWeaver',
     );
 

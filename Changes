@@ -1,6 +1,7 @@
 Revision history for Dist-Zilla-PluginBundle-DOY
 
 {{$NEXT}}
+      - allow passing options through to @Basic plugins
 
 0.03  2010-06-15
       - allow dist.ini configuration of the included plugins

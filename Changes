@@ -1,6 +1,8 @@
 Revision history for Dist-Zilla-PluginBundle-DOY
 
 {{$NEXT}}
+
+0.05  2010-10-27
       - allow using MakeMaker::Awesome if requested
 
 0.04  2010-09-03

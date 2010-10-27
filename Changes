@@ -1,6 +1,7 @@
 Revision history for Dist-Zilla-PluginBundle-DOY
 
 {{$NEXT}}
+      - allow using MakeMaker::Awesome if requested
 
 0.04  2010-09-03
       - allow passing options through to @Basic plugins

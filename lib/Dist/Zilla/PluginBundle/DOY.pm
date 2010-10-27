@@ -55,6 +55,11 @@ has dist => (
     required => 1,
 );
 
+has awesome => (
+    is  => 'ro',
+    isa => 'Str',
+);
+
 has is_task => (
     is      => 'ro',
     isa     => 'Bool',
@@ -98,7 +103,9 @@ has _plugins => (
                 ExtraTests
                 ExecDir
                 ShareDir
-                MakeMaker
+            ),
+            ($self->awesome ? $self->awesome : 'MakeMaker'),
+            qw(
                 Manifest
                 TestRelease
                 ConfirmRelease

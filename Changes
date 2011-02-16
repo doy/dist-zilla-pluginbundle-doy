@@ -1,6 +1,8 @@
 Revision history for Dist-Zilla-PluginBundle-DOY
 
 {{$NEXT}}
+
+0.06  2011-02-16
       - use Git::NextVersion instead of BumpVersionFromGit
       - use web and clone urls in Repository, and actually get the repo to use
         from git

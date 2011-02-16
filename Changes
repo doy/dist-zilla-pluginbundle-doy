@@ -1,6 +1,10 @@
 Revision history for Dist-Zilla-PluginBundle-DOY
 
 {{$NEXT}}
+      - use Git::NextVersion instead of BumpVersionFromGit
+      - use web and clone urls in Repository, and actually get the repo to use
+        from git
+      - allow testing release by setting $ENV{DZIL_FAKE_RELEASE}
 
 0.05  2010-10-27
       - allow using MakeMaker::Awesome if requested

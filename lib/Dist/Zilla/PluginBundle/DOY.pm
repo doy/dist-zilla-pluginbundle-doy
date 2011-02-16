@@ -35,15 +35,14 @@ My plugin bundle. Roughly equivalent to:
     [CompileTests]
 
     [Repository]
-    git_remote = git://github.com/doy/${lowercase_dist}
-    github_http = 0
+    git_remote = github ; or origin, if github doesn't exist
 
     [Git::Check]
     allow_dirty =
     [Git::Tag]
     tag_format = %v
     tag_message =
-    [BumpVersionFromGit]
+    [Git::NextVersion]
     version_regexp = ^(\d+\.\d+)$
     first_version = 0.01
 

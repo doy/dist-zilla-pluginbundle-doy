@@ -73,7 +73,11 @@ has is_test_dist => (
     is      => 'ro',
     isa     => 'Bool',
     lazy    => 1,
-    default => sub { shift->dist =~ /^Foo-/ ? 1 : 0 },
+    default => sub {
+        my $self = shift;
+        return 1 if $ENV{DZIL_FAKE_RELEASE};
+        return $self->dist =~ /^Foo-/ ? 1 : 0
+    },
 );
 
 has git_remote => (

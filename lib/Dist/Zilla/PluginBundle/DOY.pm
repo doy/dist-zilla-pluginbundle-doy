@@ -122,7 +122,7 @@ has _plugins => (
                 Repository
                 Git::Check
                 Git::Tag
-                BumpVersionFromGit
+                Git::NextVersion
             ),
             ($self->is_task      ? 'TaskWeaver'  : 'PodWeaver'),
             ($self->is_test_dist ? 'FakeRelease' : 'UploadToCPAN'),
@@ -145,7 +145,7 @@ has plugin_options => (
             },
             'Git::Check'         => { allow_dirty => '' },
             'Git::Tag'           => { tag_format => '%v', tag_message => '' },
-            'BumpVersionFromGit' => {
+            'Git::NextVersion' => {
                 version_regexp => '^(\d+\.\d+)$',
                 first_version  => '0.01'
             },

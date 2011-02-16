@@ -5,6 +5,7 @@ Revision history for Dist-Zilla-PluginBundle-DOY
       - use web and clone urls in Repository, and actually get the repo to use
         from git
       - allow testing release by setting $ENV{DZIL_FAKE_RELEASE}
+      - always dep on Test::More 0.88 for done_testing
 
 0.05  2010-10-27
       - allow using MakeMaker::Awesome if requested

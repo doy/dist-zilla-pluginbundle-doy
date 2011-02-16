@@ -179,6 +179,13 @@ sub configure {
     my $self = shift;
 
     $self->add_plugins(
+        [ 'Prereqs' => 'TestMoreDoneTesting' => {
+            -phase       => 'test',
+            -type        => 'requires',
+            'Test::More' => '0.88',
+        } ]
+    );
+    $self->add_plugins(
         map { [ $_ => ($self->plugin_options->{$_} || {}) ] }
             @{ $self->_plugins },
     );

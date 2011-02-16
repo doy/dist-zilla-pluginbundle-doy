@@ -2,6 +2,8 @@ package Dist::Zilla::PluginBundle::DOY;
 use Moose;
 # ABSTRACT: Dist::Zilla plugins for me
 
+use List::MoreUtils qw(any);
+
 use Dist::Zilla;
 with 'Dist::Zilla::Role::PluginBundle::Easy';
 
@@ -74,15 +76,17 @@ has is_test_dist => (
     default => sub { shift->dist =~ /^Foo-/ ? 1 : 0 },
 );
 
-has github_url => (
+has git_remote => (
     is  => 'ro',
     isa => 'Str',
     lazy => 1,
     default => sub {
         my $self = shift;
-        my $dist = $self->dist;
-        $dist = lc($dist);
-        "git://github.com/doy/$dist.git";
+        return '' unless -d '.git';
+        my @remotes = `git remote`;
+        chomp @remotes;
+        return 'github' if any { $_ eq 'github' } @remotes;
+        return 'origin';
     },
 );
 
@@ -140,8 +144,7 @@ has plugin_options => (
         my %opts = (
             'NextRelease'        => { format => '%-5v %{yyyy-MM-dd}d' },
             'Repository'         => {
-                git_remote  => $self->github_url,
-                github_http => 0
+                git_remote  => $self->git_remote,
             },
             'Git::Check'         => { allow_dirty => '' },
             'Git::Tag'           => { tag_format => '%v', tag_message => '' },

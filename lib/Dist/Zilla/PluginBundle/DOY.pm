@@ -56,6 +56,12 @@ has dist => (
     required => 1,
 );
 
+has authority => (
+    is      => 'ro',
+    isa     => 'Str',
+    default => 'cpan:DOY',
+);
+
 has awesome => (
     is  => 'ro',
     isa => 'Str',
@@ -121,6 +127,7 @@ has _plugins => (
                 NextRelease
                 CheckChangesHasContent
                 PkgVersion
+                Authority
                 PodCoverageTests
                 PodSyntaxTests
                 NoTabsTests
@@ -150,6 +157,7 @@ has plugin_options => (
             'Repository'         => {
                 git_remote  => $self->git_remote,
             },
+            'Authority'          => { authority => $self->authority },
             'Git::Check'         => { allow_dirty => '' },
             'Git::Tag'           => { tag_format => '%v', tag_message => '' },
             'Git::NextVersion' => {

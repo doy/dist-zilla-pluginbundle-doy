@@ -128,6 +128,7 @@ has _plugins => (
                 Test::Compile
                 Repository
                 Git::Check
+                Git::Commit
                 Git::Tag
                 Git::NextVersion
             ),
@@ -154,6 +155,9 @@ has plugin_options => (
             'Git::NextVersion' => {
                 version_regexp => '^(\d+\.\d+)$',
                 first_version  => '0.01'
+            },
+            'Git::Commit' => {
+                commit_msg => 'changelog',
             },
         );
 

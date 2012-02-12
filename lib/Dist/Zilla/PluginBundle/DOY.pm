@@ -67,6 +67,11 @@ has awesome => (
     isa => 'Str',
 );
 
+has dynamic_config => (
+    is  => 'ro',
+    isa => 'Str',
+);
+
 has is_task => (
     is      => 'ro',
     isa     => 'Bool',
@@ -134,6 +139,7 @@ has _plugins => (
                 EOLTests
                 Test::Compile
                 Repository
+                Metadata
                 Git::Check
                 Git::Commit
                 Git::Tag
@@ -168,6 +174,10 @@ has plugin_options => (
                 commit_msg => 'changelog',
             },
         );
+
+        $opts{Metadata} = {
+            dynamic_config => 1,
+        } if $self->dynamic_config;
 
         for my $option (keys %{ $self->payload }) {
             next unless $option =~ /^([A-Z][^_]*)_(.+)$/;

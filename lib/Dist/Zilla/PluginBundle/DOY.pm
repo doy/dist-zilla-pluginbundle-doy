@@ -32,7 +32,7 @@ My plugin bundle. Roughly equivalent to:
     [PodSyntaxTests]
     [NoTabsTests]
     [EOLTests]
-    [CompileTests]
+    [Test::Compile]
 
     [Repository]
     git_remote = github ; or origin, if github doesn't exist
@@ -125,7 +125,7 @@ has _plugins => (
                 PodSyntaxTests
                 NoTabsTests
                 EOLTests
-                CompileTests
+                Test::Compile
                 Repository
                 Git::Check
                 Git::Tag

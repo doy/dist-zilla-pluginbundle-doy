@@ -1,6 +1,8 @@
 Revision history for Dist-Zilla-PluginBundle-DOY
 
 {{$NEXT}}
+      - fix Test::Compile warnings
+      - start using Git::Commit
 
 0.06  2011-02-16
       - use Git::NextVersion instead of BumpVersionFromGit

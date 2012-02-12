@@ -12,12 +12,31 @@ with 'Dist::Zilla::Role::PluginBundle::Easy';
   # dist.ini
   [@DOY]
   dist = Dist-Zilla-PluginBundle-DOY
+  repository = github
 
 =head1 DESCRIPTION
 
 My plugin bundle. Roughly equivalent to:
 
-    [@Basic]
+    [Prereqs / TestMoreDoneTesting]
+    -phase = test
+    -type = requires
+    Test::More = 0.88
+
+    [GatherDir]
+    [PruneCruft]
+    [ManifestSkip]
+    [MetaYAML]
+    [License]
+    [Readme]
+    [ExtraTests]
+    [ExecDir]
+    [ShareDir]
+    [MakeMaker]
+    [Manifest]
+
+    [TestRelease]
+    [ConfirmRelease]
 
     [MetaConfig]
     [MetaJSON]
@@ -27,6 +46,8 @@ My plugin bundle. Roughly equivalent to:
     [CheckChangesHasContent]
 
     [PkgVersion]
+    [Authority]
+    authority = cpan:DOY
 
     [PodCoverageTests]
     [PodSyntaxTests]
@@ -34,11 +55,13 @@ My plugin bundle. Roughly equivalent to:
     [EOLTests]
     [Test::Compile]
 
-    [Repository]
-    git_remote = github ; or origin, if github doesn't exist
+    [MetaResources]
+    ; autoconfigured, based on the value of 'repository'
 
     [Git::Check]
     allow_dirty =
+    [Git::Commit]
+    commit_msg = changelog
     [Git::Tag]
     tag_format = %v
     tag_message =
@@ -47,6 +70,8 @@ My plugin bundle. Roughly equivalent to:
     first_version = 0.01
 
     [PodWeaver]
+
+    [UploadToCPAN]
 
 =cut
 
@@ -313,6 +338,7 @@ L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Dist-Zilla-PluginBundle-DOY>.
 =head1 SEE ALSO
 
 L<Dist::Zilla>
+
 L<Task::BeLike::DOY>
 
 =head1 SUPPORT

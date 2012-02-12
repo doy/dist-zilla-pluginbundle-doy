@@ -2,7 +2,10 @@ Revision history for Dist-Zilla-PluginBundle-DOY
 
 {{$NEXT}}
       - fix Test::Compile warnings
-      - start using Git::Commit
+      - start using Git::Commit and Authority
+      - allow specifying dynamic_config = 1 in dist.ini
+      - use explicit MetaResources rather than inferring things via Repository
+        and locally-run git commands
 
 0.06  2011-02-16
       - use Git::NextVersion instead of BumpVersionFromGit

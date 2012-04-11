@@ -204,11 +204,6 @@ has is_test_dist => (
     },
 );
 
-has git_remote => (
-    is  => 'ro',
-    isa => 'Str',
-);
-
 has _plugins => (
     is      => 'ro',
     isa     => 'ArrayRef[Str]',

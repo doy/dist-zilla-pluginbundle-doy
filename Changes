@@ -1,6 +1,7 @@
 Revision history for Dist-Zilla-PluginBundle-DOY
 
 {{$NEXT}}
+      - switch from [ExtraTests] to [CheckExtraTests]
 
 0.08  2012-02-13
       - missed a few deps

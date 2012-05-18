@@ -29,8 +29,6 @@ My plugin bundle. Roughly equivalent to:
     [MetaYAML]
     [License]
     [Readme]
-    [CheckExtraTests]
-    :version = 0.006
     [RunExtraTests]
     [ExecDir]
     [ShareDir]
@@ -220,7 +218,6 @@ has _plugins => (
                 MetaYAML
                 License
                 Readme
-                CheckExtraTests
                 RunExtraTests
                 ExecDir
                 ShareDir
@@ -262,7 +259,6 @@ has plugin_options => (
     default  => sub {
         my $self = shift;
         my %opts = (
-            'CheckExtraTests'    => { ':version' => 0.006 },
             'NextRelease'        => { format => '%-5v %{yyyy-MM-dd}d' },
             'Authority'          => { authority => $self->authority },
             'Git::Check'         => { allow_dirty => '' },

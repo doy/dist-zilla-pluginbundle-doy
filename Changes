@@ -1,6 +1,8 @@
 Revision history for Dist-Zilla-PluginBundle-DOY
 
 {{$NEXT}}
+
+0.10  2013-06-26
       - disable bugtracker.mailto warning
 
 0.09  2012-05-17

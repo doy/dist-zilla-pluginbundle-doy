@@ -1,6 +1,7 @@
 Revision history for Dist-Zilla-PluginBundle-DOY
 
 {{$NEXT}}
+      - disable bugtracker.mailto warning
 
 0.09  2012-05-17
       - switch from [ExtraTests] to [CheckExtraTests]

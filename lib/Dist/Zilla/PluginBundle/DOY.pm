@@ -279,7 +279,7 @@ has plugin_options => (
         for my $metaresource (qw(repository.type repository.url repository.web bugtracker.web bugtracker.mailto homepage)) {
             (my $method = $metaresource) =~ s/\./_/g;
             my $value = $self->$method;
-            if (!$value) {
+            if ($metaresource ne 'bugtracker.mailto' && !$value) {
                 warn "*** resources.$metaresource is not configured! This needs to be fixed! ***";
                 next;
             }

@@ -204,6 +204,12 @@ has is_test_dist => (
     },
 );
 
+has done_testing => (
+    is      => 'ro',
+    isa     => 'Bool',
+    default => 1,
+);
+
 has _plugins => (
     is      => 'ro',
     isa     => 'ArrayRef[Str]',
@@ -316,7 +322,7 @@ sub configure {
             -type        => 'requires',
             'Test::More' => '0.88',
         } ]
-    );
+    ) if $self->done_testing;
     $self->add_plugins(
         map { [ $_ => ($self->plugin_options->{$_} || {}) ] }
             @{ $self->_plugins },

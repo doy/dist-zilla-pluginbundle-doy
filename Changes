@@ -1,6 +1,8 @@
 Revision history for Dist-Zilla-PluginBundle-DOY
 
 {{$NEXT}}
+
+0.12  2013-07-04
       - allow suppressing the done_testing test dep
 
 0.11  2013-06-26

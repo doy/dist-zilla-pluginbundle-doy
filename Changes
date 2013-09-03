@@ -1,6 +1,8 @@
 Revision history for Dist-Zilla-PluginBundle-DOY
 
 {{$NEXT}}
+
+0.14  2013-09-03
       - enabling [AutoPrereqs] by default breaks too much stuff, remove it
 
 0.13  2013-09-03

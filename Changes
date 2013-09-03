@@ -1,6 +1,8 @@
 Revision history for Dist-Zilla-PluginBundle-DOY
 
 {{$NEXT}}
+      - add [AutoPrereqs], [ContributorsFromGit], and [MetaProvides::Package]
+      - default to github issues for bugtracker
 
 0.12  2013-07-04
       - allow suppressing the done_testing test dep

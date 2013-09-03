@@ -73,7 +73,6 @@ My plugin bundle. Roughly equivalent to:
 
     [UploadToCPAN]
 
-    [AutoPrereqs]
     [ContributorsFromGit]
     [MetaProvides::Package]
 
@@ -288,7 +287,6 @@ has _plugins => (
                 Git::Commit
                 Git::Tag
                 Git::NextVersion
-                AutoPrereqs
                 ContributorsFromGit
                 MetaProvides::Package
             ),

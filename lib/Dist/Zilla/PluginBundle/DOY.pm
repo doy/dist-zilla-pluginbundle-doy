@@ -73,6 +73,10 @@ My plugin bundle. Roughly equivalent to:
 
     [UploadToCPAN]
 
+    [AutoPrereqs]
+    [ContributorsFromGit]
+    [MetaProvides::Package]
+
 =cut
 
 has dist => (

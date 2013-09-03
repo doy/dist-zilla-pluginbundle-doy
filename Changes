@@ -1,6 +1,8 @@
 Revision history for Dist-Zilla-PluginBundle-DOY
 
 {{$NEXT}}
+
+0.13  2013-09-03
       - add [AutoPrereqs], [ContributorsFromGit], and [MetaProvides::Package]
       - default to github issues for bugtracker
 

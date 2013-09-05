@@ -372,9 +372,8 @@ sub configure {
 
 No known bugs.
 
-Please report any bugs through RT: email
-C<bug-dist-zilla-pluginbundle-doy at rt.cpan.org>, or browse to
-L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Dist-Zilla-PluginBundle-DOY>.
+Please report any bugs to GitHub Issues at
+L<https://github.com/doy/dist-zilla-pluginbundle-doy/issues>.
 
 =head1 SEE ALSO
 

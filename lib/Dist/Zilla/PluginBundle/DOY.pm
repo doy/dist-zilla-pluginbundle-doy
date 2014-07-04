@@ -51,7 +51,7 @@ My plugin bundle. Roughly equivalent to:
 
     [PodCoverageTests]
     [PodSyntaxTests]
-    [NoTabsTests]
+    [Test::NoTabs]
     [EOLTests]
     [Test::Compile]
 
@@ -278,7 +278,7 @@ has _plugins => (
                 Authority
                 PodCoverageTests
                 PodSyntaxTests
-                NoTabsTests
+                Test::NoTabs
                 EOLTests
                 Test::Compile
                 Metadata

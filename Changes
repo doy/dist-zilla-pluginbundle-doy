@@ -1,6 +1,8 @@
 Revision history for Dist-Zilla-PluginBundle-DOY
 
 {{$NEXT}}
+
+0.15  2014-07-04
       - replace [NoTabsTests] with [Test::NoTabs] (madsen, #1)
 
 0.14  2013-09-03

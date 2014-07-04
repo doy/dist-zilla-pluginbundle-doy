@@ -1,6 +1,7 @@
 Revision history for Dist-Zilla-PluginBundle-DOY
 
 {{$NEXT}}
+      - replace [NoTabsTests] with [Test::NoTabs] (madsen, #1)
 
 0.14  2013-09-03
       - enabling [AutoPrereqs] by default breaks too much stuff, remove it

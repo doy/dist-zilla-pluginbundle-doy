@@ -279,7 +279,7 @@ has _plugins => (
                 PodCoverageTests
                 PodSyntaxTests
                 Test::NoTabs
-                EOLTests
+                Test::EOL
                 Test::Compile
                 Metadata
                 MetaResources

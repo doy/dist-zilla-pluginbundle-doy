@@ -5,7 +5,10 @@ use Moose;
 use List::MoreUtils qw(any);
 
 use Dist::Zilla;
-with 'Dist::Zilla::Role::PluginBundle::Easy';
+with
+    'Dist::Zilla::Role::PluginBundle::Easy',
+    'Dist::Zilla::Role::PluginBundle::PluginRemover' => { -version => '0.103' },
+    'Dist::Zilla::Role::PluginBundle::Config::Slicer';
 
 =head1 SYNOPSIS
 

@@ -73,7 +73,7 @@ My plugin bundle. Roughly equivalent to:
 
     [UploadToCPAN]
 
-    [ContributorsFromGit]
+    [Git::Contributors]
     [MetaProvides::Package]
 
 =cut

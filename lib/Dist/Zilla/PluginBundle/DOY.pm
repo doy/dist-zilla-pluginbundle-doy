@@ -52,7 +52,7 @@ My plugin bundle. Roughly equivalent to:
     [PodCoverageTests]
     [PodSyntaxTests]
     [Test::NoTabs]
-    [EOLTests]
+    [Test::EOL]
     [Test::Compile]
 
     [MetaResources]
